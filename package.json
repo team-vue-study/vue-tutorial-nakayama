@@ -1,0 +1,11 @@
+{
+  "name": "study",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "author": "nakayama",
+  "license": "MIT",
+  "dependencies": {
+    "vue": "^2.5.17"
+  }
+}

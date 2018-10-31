@@ -1,0 +1,61 @@
+
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>    
+    </head>
+    <body>
+        <div id="app">
+            {{ message }}
+        </div>
+
+        <div id="app-2">
+            <span v-bind:title="message">
+                mouse over
+            </span>
+        </div>
+
+        <form id="demo">
+            <p>
+                <input v-model="test">
+                {{ test }}
+            </p>
+        </form>
+
+        <div id="app-3">
+            <span v-if="seen"></span>
+        </div>
+
+        <div id="app-4">
+            <ol>
+                <li v-for="todo in todos">
+                    {{ todo.text }}
+                </li>
+            </ol>
+        </div>
+
+        <div id="app-5">
+            <button v-on:click="plus">Plus</button>
+            <li v-for="result in results">
+                <span v-if="parseInt(result.text)%15 == 0">
+                    {{ result.text }},FizzBuzz
+                </span>
+                <span v-else-if="parseInt(result.text)%3 == 0">
+                    {{ result.text }},Fizz
+                </span>
+                <span v-else-if="parseInt(result.text)%5 == 0">
+                    {{ result.text }},Buzz
+                </span>
+                <span v-else>
+                    {{ result.text }}
+                </span>
+            </li>
+        </div>
+
+        <div id="take-card">
+            <button v-on:click="takeCard">takeCard</button>
+            <card-comp v-bind:card="card"></card-comp>
+        </div>
+
+        <script src="index.js" ></script>
+    </body>
+</html>
