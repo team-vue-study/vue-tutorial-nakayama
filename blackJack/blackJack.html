@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>    
+    </head>
+    <body>
+        <div id="take-card">
+            <button v-on:click="initCards">トランプを用意する</button>
+            <button v-on:click="takeCard">takeCard</button>
+            <card-comp v-bind:card="card"></card-comp>
+        </div>
+
+        <script src="blackJack.js" ></script>
+    </body>
+</html>
